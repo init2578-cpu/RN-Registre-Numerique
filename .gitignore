@@ -1,0 +1,18 @@
+node_modules/
+dist/
+dist_electron/
+deploy_build/
+deploy_build - Copy/
+final_build/
+.env
+*.sqlite
+backend/node_modules/
+frontend/node_modules/
+release/
+out/
+build/
+*.exe
+*.7z
+*.zip
+*.tar.gz
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide d'Utilisation - Registre Numérique</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #235B3B;
+            border-bottom: 2px solid #2B9348;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #2b7a4b;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #3498DB;
+        }
+
+        p,
+        li {
+            font-size: 16px;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 20px;
+        }
+
+        .alert {
+            background-color: #f8fafe;
+            border-left: 4px solid #3498DB;
+            padding: 10px 15px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #2B9348;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .btn-red {
+            background-color: #E74C3C;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 40px 0;
+        }
+
+        @media print {
+            body {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="no-print" style="text-align: right; margin-bottom: 20px;">
+        <button onclick="window.print()"
+            style="padding: 10px 20px; background: #235B3B; color: white; border: none; cursor: pointer; font-size: 16px; border-radius: 5px;">🖨️
+            Imprimer / Sauvegarder en PDF</button>
+    </div>
+
+    <h1>Guide d'Utilisation - Registre Numérique</h1>
+
+    <p>Ce manuel de prise en main rapide a pour but de vous familiariser avec les différentes interfaces et
+        fonctionnalités du Registre Numérique des Visiteurs du service.</p>
+
+    <hr>
+
+    <h2>1. Démarrage de l'Application</h2>
+    <p>L'application est conçue pour fonctionner comme un logiciel de bureau autonome.</p>
+    <ul>
+        <li><strong>Lancement au quotidien :</strong> Exécutez le raccourci <strong>Registre Numérique</strong> sur
+            votre
+            bureau (ou lancez <code>npm run dev</code> si vous êtes en mode développement).</li>
+        <li>L'interface principale s'ouvrira, contenant un panneau latéral gauche pour l'enregistrement et une zone
+            centrale pour le suivi.</li>
+    </ul>
+
+    <hr>
+
+    <h2>2. Le Menu Latéral (Enregistrement d'une Entrée)</h2>
+    <p>Positionné à gauche de l'écran (sous le logo du service), ce formulaire permet d'accueillir un visiteur.</p>
+
+    <h3>Étapes pour enregistrer un visiteur :</h3>
+    <ol>
+        <li><strong>Renseignez le Numéro de Téléphone :</strong> C'est le champ principal. S'il s'agit d'un visiteur
+            fréquent, le système reconnaîtra son numéro et pré-remplira automatiquement son Nom, Prénom et Type/Numéro
+            de pièce d'identité.</li>
+        <li><strong>Identité et Provenance :</strong> Complétez ou vérifiez le Prénom, Nom et la provenance
+            (Quartier/Institution).</li>
+        <li><strong>Pièce d'Identité :</strong> Sélectionnez le type (CNI, Passeport, Autre) et renseignez le numéro.
+        </li>
+        <li><strong>Motif et Service :</strong> Choisissez la raison de la visite (Si vous cochez "Autre", un champ
+            supplémentaire s'affichera pour préciser le motif). Indiquez la personne ou le service demandé.</li>
+        <li>Cliquez sur le grand bouton vert <span class="btn">Valider l'Entrée</span>.</li>
+    </ol>
+    <div class="alert">
+        <strong>À noter :</strong> Dès la validation, le visiteur apparaît instantanément dans le tableau central
+        "Présence Réelle".
+    </div>
+
+    <hr>
+
+    <h2>3. Le Tableau de Bord (Dashboard Principal)</h2>
+    <p>L'onglet <strong>Dashboard</strong> offre une vue d'ensemble en temps réel sur l'activité du bureau.</p>
+
+    <h3>Les Statistiques Temps Réel (En haut)</h3>
+    <ul>
+        <li><strong>En Cours (Orange) :</strong> Le nombre de visiteurs <em>actuellement</em> à l'intérieur de
+            l'établissement.</li>
+        <li><strong>Aujourd'hui (Vert) :</strong> Le total cumulé des visites validées pour la journée en cours.</li>
+        <li><strong>Ce Mois (Bleu) :</strong> Le cumul des visites mensuelles.</li>
+    </ul>
+
+    <h3>Le Tableau des "Présences Réelles" (Au centre)</h3>
+    <p>Il liste tous les visiteurs qui ne sont pas encore partis. Il affiche l'heure d'arrivée, le contact exact et le
+        motif.</p>
+    <ul>
+        <li><strong>Sortie (Rouge) :</strong> Lorsqu'un visiteur quitte les locaux, cliquez sur ce bouton pour valider
+            son départ.</li>
+        <li><strong>Annuler (Gris) :</strong> En cas d'erreur de saisie (ex: doublon), cliquez sur ce bouton. Le
+            visiteur passera en statut "Annulé".</li>
+        <li><strong>Rejeter (Noir) :</strong> Si l'accès est finalement refusé, cliquez sur ce bouton (le statut
+            deviendra "Rejeté").</li>
+        <li>Un <strong>Popup de confirmation</strong> s'ouvrira pour vous demander de confirmer chacune de ces actions
+            avant de déplacer le visiteur vers les archives.</li>
+    </ul>
+
+    <hr>
+
+    <h2>4. L'Onglet Statistiques & Affluence</h2>
+    <p>Cet espace est dédié à l'analyse à long terme de vos flux de visiteurs.</p>
+    <ul>
+        <li><strong>Chiffres Globaux :</strong> Rappel des totaux mensuels, annuels et depuis la création du registre.
+        </li>
+        <li><strong>Les Tops (Heures, Jours, Mois) :</strong> Trois encarts analysent vos données pour déterminer à
+            quelles heures vous avez le plus d'affluence, quel jour de la semaine est le plus chargé, etc.</li>
+        <li><strong>Graphiques interactifs :</strong> Cliquez sur l'icône de loupe à côté des diagrammes circulaires
+            (Motifs et Statuts) ou des courbes d'évolution pour les agrandir en plein écran.</li>
+    </ul>
+    <p><strong>Exportation des Statistiques :</strong> En haut à droite, le bouton <strong>Télécharger le Rapport
+            Excel</strong> vous permet de générer un fichier <code>.csv</code> structuré regroupant toutes ces tendances
+        (Parfait pour un compte-rendu de direction).</p>
+
+    <hr>
+
+    <h2>5. L'Onglet Archives & Historique</h2>
+    <p>C'est ici que reposent les données de tous les mouvements terminés.</p>
+    <ul>
+        <li><strong>Filtres de Recherche :</strong> Vous pouvez chercher une visite spécifique en sélectionnant une
+            Date, ou en tapant un nom, un prénom ou un numéro de téléphone dans la barre de recherche.</li>
+        <li><strong>Détail du Tableau :</strong> Le tableau consigne avec précision l'heure d'entrée et l'heure de
+            sortie. Par souci de visibilité technique, l'information de la pièce d'identité (CNI/Passeport) est logée
+            subtilement sous le numéro de téléphone.</li>
+        <li><strong>Exportation de l'Historique :</strong> Le bouton d'export permet de télécharger sur votre ordinateur
+            la liste affichée sous un format tableur Excel pour vos propres traitements locaux.</li>
+        <li><strong>Correction & Nettoyage :</strong> Vous pouvez <strong>Modifier</strong> ou
+            <strong>Supprimer</strong> définitivement une entrée. (Mot de passe requis : <code>iNiT@CRE_KOLDA</code>)
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2>6. Personnalisation Globale & Administration</h2>
+    <p>
+        Cliquez sur le bouton bleu flottant contenant l'icône
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            style="vertical-align: middle; background-color: #3498db; color: white; border-radius: 50%; padding: 4px;">
+            <path
+                d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+            </path>
+            <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+        situé <strong>en bas à droite</strong> de l'écran pour ouvrir l'interface d'administration.
+    </p>
+
+    <ul>
+        <li><strong>Informations de l'Application :</strong> Vous pouvez uploader un nouveau Logo (image) et modifier le
+            Titre de l'application affiché en haut du menu latéral.</li>
+        <li><strong>Apparence & Couleurs :</strong> Un nuancier vous permet de personnaliser les couleurs dominantes
+            (Barre latérale, boutons d'action "Valider", boutons d'action secondaires). Un bouton "Réinitialiser" permet
+            de remettre les couleurs par défaut.</li>
+        <li><strong>Gestion de la Base de Données 💾 :</strong>
+            <ul>
+                <li><strong>Sauvegarder :</strong> Télécharge instantanément une copie de toutes vos données (fichier
+                    <code>.sqlite</code>). Idéal pour un backup quotidien.
+                </li>
+                <li><strong>Restaurer :</strong> Uploadez un fichier sauvegardé pour écraser les données actuelles.</li>
+                <li><strong>Vider la base :</strong> (Action sensible) Efface en un clic tout l'historique et les
+                    statistiques. Pratique pour commencer une nouvelle année civile.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="alert" style="border-left-color: #E74C3C;">
+        <strong>Sécurité :</strong> Toutes ces modifications de paramètres nécessitent obligatoirement de saisir le Mot
+        de Passe Administrateur : <strong><code>CodeFire@CRE_KOLDA</code></strong>.
+    </div>
+
+    <hr>
+    <p style="text-align: center; color: #7f8c8d; font-size: 14px;">
+        <em>Ce système a été créé pour assurer un suivi fluide, sécurisé (base de données locale) et optimisé pour
+            fluidifier le travail de l'accueil au sein des services.</em>
+    </p>
+
+    <div
+        style="text-align: center; margin-top: 40px; padding: 15px 0; border-top: 1px solid #e0e0e0; color: #95a5a6; font-size: 13px; font-weight: 500;">
+        Version 1.0.3 &copy; 2026 | iNiT - CRE KOLDA
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+﻿﻿Charte d'Engagement et de Responsabilité : Registre Numérique (RN)
+
+1. Objet
+La présente charte définit les conditions d'utilisation et les règles d'engagement relatives au logiciel RN CRE KOLDA, outil de gestion et de sécurisation des flux de visiteurs conçu pour les services publics et privés.
+
+2. Propriété Intellectuelle et Usage
+Ce logiciel est une solution technique destinée à l'optimisation de l'accueil et de la traçabilité des visiteurs.
+
+Usage autorisé : Le logiciel est concédé pour un usage strictement administratif et sécuritaire au sein de l'organisation utilisatrice.
+
+INTERDICTION DE COMMERCIALISATION : Toute vente, revente, location ou exploitation commerciale du présent logiciel par un tiers ou une entité utilisatrice est STRICTEMENT INTERDITE. L'application est fournie pour répondre à un besoin de transformation digitale et ne peut en aucun cas faire l'objet d'une transaction marchande sans l'accord écrit et explicite de son concepteur.
+
+3. Protection des Données et Confidentialité
+L'organisation utilisatrice est responsable des données collectées via le logiciel. Elle s'engage à :
+- Respecter les lois en vigueur sur la protection des données à caractère personnel.
+- Ne pas utiliser les informations des visiteurs à des fins de prospection non sollicitée.
+- Garantir l'intégrité de la base de données locale.
+
+4. Responsabilités du Prestataire et de l'Utilisateur
+Le Concepteur : S'engage à fournir un outil fonctionnel aligné sur les standards de sécurité actuels.
+L'Utilisateur : S'engage à ne pas altérer, décompiler ou tenter de distribuer le logiciel sous une autre marque ou identité.
